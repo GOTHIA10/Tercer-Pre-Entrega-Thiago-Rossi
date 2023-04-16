@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario para Socios Leprosos</title>
+</head>
+<body>
+    <form action="{% url 'socio' %}" method="POST"> {% csrf_token %}
+        <p> Nombre del socio: <input type="text" name="nombre"></p>
+        <p> Apellido del socio: <input type="text" name="apellido"></p>
+        <p> Numero de carnet: <input type="number" name="NroSocio"></p>
+        
+        <button type="submit"> Enviar </button>
+        
+
+    </form>
+</body>
+</html>
